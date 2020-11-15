@@ -72,7 +72,8 @@ module.exports = {
   },
 
   poistaAsiakas: function (req, res) {
-    var id = req.body.avain;
+    // var id = req.body.avain;
+    var id = req.params.id;
     console.log(id);
 
     var sql = "DELETE FROM ASIAKAS WHERE AVAIN = '" + id + "'";

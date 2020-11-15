@@ -12,11 +12,12 @@ var customerController = require('./customerController');
 app.route("/Tyypit")
     .get(customerController.haeTyypit)
 
+// app.route("/haeAsiakkaat").get(customerController.haeAsiakkaat);
 app.route("/haeAsiakkaat").get(customerController.haeAsiakkaat);
 
 app.route("/lisaa").post(customerController.lisaaAsiakas);
 
-app.route("/poista").delete(customerController.poistaAsiakas);
+app.route("/poista/:id").delete(customerController.poistaAsiakas);
 
 
 app.listen(3000, function () {

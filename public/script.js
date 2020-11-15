@@ -55,11 +55,11 @@ $(document).ready(function () {
 
     poista = (id) => {
         $.ajax({
-            url: `http://localhost:3000/poista`,
+            url: 'http://localhost:3000/poista/'+id,
             type: "delete",
-            data: {
-                avain: (id)
-            },
+            // data: {
+            //     avain: (id)
+            // },
             success: (result) => {
                 alert("Poisto onnistui!")
                 hae();
